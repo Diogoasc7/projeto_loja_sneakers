@@ -163,7 +163,7 @@ footer {
     }
 
     .container img {
-        width: 70%; /* Ajuste o valor conforme necessário para aumentar o tamanho da imagem */
+        width: 60%; /* Ajuste o valor conforme necessário para aumentar o tamanho da imagem */
         display: block; /* Garante que a imagem seja tratada como um bloco */
         margin: 0 auto; /* Centraliza a imagem horizontalmente */
     }

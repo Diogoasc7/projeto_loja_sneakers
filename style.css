@@ -53,12 +53,12 @@ section .container {
     align-items: flex-start;
 }
 
-section {
-    padding: 24px 0;
-}
-
 section h2 {
     margin-bottom: 16px;
+}
+
+section {
+    padding: 24px 0;
 }
 
 section {
@@ -85,10 +85,6 @@ h2 {
     font-size: 2.4rem;
     color: rgb(0, 0, 133);
     border-bottom: 3px solid rgb(0, 0, 133);
-}
-
-.produtos {
-    margin: 20px 0;
 }
 
 .products_wrapper {
@@ -215,6 +211,10 @@ footer {
 
     section .container {
         flex-direction: column;
+        text-align: center;
+    }
+
+    section > h2 {
         text-align: center;
     }
 

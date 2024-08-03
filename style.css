@@ -11,14 +11,15 @@ body {
     line-height: 1.6;
 }
 
-body, html {
+body,
+html {
     height: 100%;
 }
 
 header {
     display: block;
     unicode-bidi: isolate;
-    padding: 16px ; 
+    padding: 16px;
     background-color: rgb(0, 0, 133);
     color: #ecf0f1;
     font-weight: normal;
@@ -35,41 +36,28 @@ header nav li a {
     text-decoration: none;
 }
 
-.container{
+.container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
 header .container,
-section .container{
+section .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.container{
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-header .container,
-section .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-section .container{
+section .container {
     align-items: flex-start;
 }
 
-section{
+section {
     padding: 24px 0;
 }
 
-section h2{
+section h2 {
     margin-bottom: 16px;
 }
 
@@ -81,7 +69,7 @@ section p {
     margin-bottom: 8px;
 }
 
-.store-front{
+.store-front {
     margin-right: 64px;
     height: 80%;
     width: 50%;
@@ -92,7 +80,7 @@ section p {
     margin-inline: auto;
 }
 
-section > h2 {
+h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 2.4rem;
     color: rgb(0, 0, 133);
@@ -107,6 +95,7 @@ section > h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .products_box {
@@ -152,7 +141,7 @@ section > h2 {
 }
 
 .botao-box:hover {
-    background-color: rgb(0, 0, 92);
+    background-color: rgb(0, 0, 44);
 }
 
 footer {
@@ -167,26 +156,88 @@ footer {
     padding-block: 0.8rem;
 }
 
-
-@media  screen and (min-width: 768px) and (max-width: 1023px) {
-    .wrapper {
-        max-width: 90%;
+/* Media Queries para dispositivos Tablet */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .container > img {
+        text-align: center;
     }
 
-    .destauqe .noticia a {
-        font-size: 1.5em;
+    .container img {
+        width: 70%; /* Ajuste o valor conforme necessário para aumentar o tamanho da imagem */
+        display: block; /* Garante que a imagem seja tratada como um bloco */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+
+    section .container {
+        display: block;
+        align-items: center;
+    }
+
+        .store-front {
+            width: 40%;
+            margin-right: 32px;
+        }
+    
+        .products_box {
+            flex: 1 1 calc(50% - 20px);
+        }
+    
+        .box_info_title {
+            font-size: 1.1em;
+        }
+    
+        .box_info_description {
+            font-size: 0.85em;
+        }
+    }
+
+/* Media Queries para dispositivos Mobile */
+@media screen and (max-width: 640px) {
+    header {
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 8px;
+    }
+
+    header nav li {
+        display: inline;
+        padding: 16px 0;
+        margin: 16px 0;
+    }
+
+    .store-front {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    section .container {
+        flex-direction: column;
+        text-align: center;
     }
 
     .products_wrapper {
-        grid-template-columns: repeat(2, 49%);
+        flex-direction: column;
+    }
+
+    .products_box {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .box_info_title {
+        font-size: 1em;
+    }
+
+    .box_info_description {
+        font-size: 0.8em;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .botao-menu {
-        display: none;
-    }
-}
+
+
 
 
 
